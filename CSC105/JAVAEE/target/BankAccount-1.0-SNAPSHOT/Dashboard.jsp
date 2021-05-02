@@ -14,6 +14,14 @@
 AccountNumber : ${account.accountNumber} <br>
 AccountName : ${account.accountName} <br>
 Amount : ${account.amount} <br>
+<br>
+<h2>Deposit money</h2>
+<form method="post" action="DepositServlet">
+    <input type="number" placeholder="type your number" name="number">
+    <input type="submit">
+</form>
+
+Deposit : ${amount}
 
 
 </body>
