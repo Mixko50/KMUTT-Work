@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    background: #edeef7;
+}
+
+/* Header Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header>p {
+    animation: animate 5s infinite;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #7868e6;
+    text-shadow: 2px 2px #b8b5ff;
+}
+
+h2,
+h3 {
+    color: #7868e6;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #7868e6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    transition: .3s;
+
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #e4fbff;
+    color: black;
+    border-radius: 10px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 50%;
+}
+
+.leftcolumn>.card>.fakeimg {
+    background-image: url(./img/pic2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    height: 200px;
+}
+
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 50%;
+    background-color: #edeef7;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.rightcolumn>.card>.fakeimg {
+    background-image: url(./img/pic1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    height: 170px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: #e4fbff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: .3s;
+    border: 2px solid #a499e7;
+}
+
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 7px rgb(223, 215, 218);
+}
+
+/* Clear floats after the columns */
+.separator {
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(to right top, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8);
+    margin-top: 20px;
+    clear: both;
+    border-radius: 20px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0);
+        color: #7868e6;
+    }
+
+    25% {
+        transform: translateX(200px);
+        color: #9fd8df;
+    }
+
+    75% {
+        transform: translateX(-200px);
+        color: aqua;
+    }
+
+    100% {
+        transform: translateX(0);
+        color: brown;
+    }
+}
+
+.footer>h2 {
+    color: black;
+}
+
+/* When the screen is less than 768px wide, make the two columns */
+/* stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+
+    .leftcolumn>.card>p {}
+
+    @keyframes animate {
+        0% {
+            transform: translateX(0);
+            color: #7868e6;
+        }
+
+        25% {
+            transform: translateX(60px);
+            color: #9fd8df;
+        }
+
+        75% {
+            transform: translateX(-60px);
+            color: aqua;
+        }
+
+        100% {
+            transform: translateX(0);
+            color: brown;
+        }
+
+    }
+
+    .leftcolumn>.card>.fakeimg {
+        height: 150px;
+    }
+
+
+    .rightcolumn>.card>.fakeimg {
+        height: 150px;
+    }
+}
+
+/* When the screen is less than 360px wide, make the navigation */
+/* links stack on top of each other instead of next to each other */
+@media screen and (max-width: 360px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+
+    .rightcolumn>.card>.fakeimg {
+        height: 300px;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateX(0);
+            color: #7868e6;
+        }
+
+        25% {
+            transform: translateX(35px);
+            color: #9fd8df;
+        }
+
+        75% {
+            transform: translateX(-35px);
+            color: aqua;
+        }
+
+        100% {
+            transform: translateX(0);
+            color: brown;
+        }
+
+    }
+
+
+
+}

@@ -15,7 +15,7 @@ public class AdvancedSorting {
         MyData d3 = new MyData(100);
         d3.data = d1.data.clone();
         d3.size = d1.size;
-        
+
         System.out.println("Quick sort");
         d1.printData();
         d1.quickSort(0, d1.size-1);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Banana-Papaya Experiment</title>
+</head>
+
+<body>
+    <div class="title">
+        <h1 style="font-size: 50px;">The Banana-Papaya Experiment</h1>
+    </div>
+    <div class="bigbox">
+        <div class="small-box">
+            <div class="content">
+                <div class="left-box">
+                    <div>b1</div>
+                    <div>b2</div>
+                    <div>p1</div>
+                    <div>p2</div>
+                    <div>k1</div>
+                    <div>k2</div>
+                </div>
+                <div class="right-box">
+                    <input placeholder="input your number" id="b1" type="number" onchange="cColor()">
+                    <input placeholder="input your number" id="b2" type="number" onchange="cColor()">
+                    <input placeholder="input your number" id="p1" type="number" onchange="cColor()">
+                    <input placeholder="input your number" id="p2" type="number" onchange="cColor()">
+                    <input placeholder="input your number" id="k1" type="number" onchange="cColor()">
+                    <input placeholder="input your number" id="k2" type="number" onchange="cColor()">
+                </div>
+            </div>
+            <div class="button-box">
+                <div class="submit" onclick="check()">Submit</div>
+                <div class="clear" onclick="reset()">Clear</div>
+            </div>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+
+</html>
