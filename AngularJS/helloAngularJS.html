@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Hello AngularJS</title>
+</head>
+<body>
+    <div ng-app="" ng-init="x=1; y=2;">
+        Welcome to AngularJS Training
+        <br>
+        What is your name?
+        <input type="text" name="" id="" ng-model="username" />
+        <br> Hello {{ username }}! How are you ?
+        <p ng-bind="username"> </p> username is binding inside the Training
+        <p class="{{username}}"> Test</p>
+        <input type="text" name="" ng-model="username">
+        <h3>{{ x + "/" + y + "=" + x/y}}</h3>
+        <input type="text" ng-model="x">
+    </div>
+    <style>
+        .orange {
+            color: orange;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Loop</title>
+</head>
+<body>
+    <div ng-app="" ng-init="students=['Jannette', 'Opor', 'Athip', 'Golf', 'Toei', 'Best', 'Mix', 'Ann', 'DJ', 'Stamp' ]; 
+                            gpas=[3.44, 3.11, 2.06, 3.00, 4.00, 2.44, 3.6, 3.8, 3.9, 3.4]">
+        <h1>Student Roster</h1>
+        <ol>
+            <li ng-repeat="x in students">
+                {{x}} : {{gpas[$index]}}
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

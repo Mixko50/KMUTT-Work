@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>App Controller</title>
+</head>
+<body>
+    <div ng-app="app1" ng-controller="myController">
+        <input type="text" ng-model="username">
+        <p ng-bind="emotion"></p>
+        <input type="number" ng-model="a">
+        <input type="number" ng-model="a2">
+    </div>
+
+    <script>
+        const app = angular.module('app1', [])
+        app.controller('myController', function ($scope){
+            $scope.username = "Mixko";
+            const x = prompt("How are you doing?");
+            $scope.a = 5;
+            $scope.emotion = x;
+            $scope.a2 = $scope.a * 7;
+        } )
+    </script>
+
+</body>
+</html>

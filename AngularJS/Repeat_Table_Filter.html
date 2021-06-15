@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Table</title>
+</head>
+<body>
+    <div ng-app="" ng-init="
+         students=[ {name:'Jannette', gpa:3.2, gender:'F'},
+                   {name:'Opor',     gpa:3.5, gender:'F'},
+                   {name:'Athip',    gpa:2.9, gender:'M'},
+                   {name:'Golf',     gpa:3.5, gender:'M'},
+                   {name:'Best',     gpa:3.9, gender:'M'},
+                   {name:'Ann',      gpa:3.5, gender:'F'} ];
+    ">
+        <h4>Student List</h4>
+        <input type="text" ng-model="useFilter">
+        <table border="1">
+            <tr> 
+                <th>Name</th>
+                <th>GPA</th>
+                <th>Gender</th>
+            </tr>
+            <tr ng-repeat="x in students | orderBy: 'name' | filter: useFilter ">
+                <td> {{ x.name }}</td>
+                <td> {{ x.gpa }}</td>
+                <td> {{ x.gender }}</td>
+            </tr>
+        </table>
+</div>
+</body>
+</html>

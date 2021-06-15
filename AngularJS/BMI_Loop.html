@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Body Mass Index</title>
+</head>
+
+<body>
+    <div ng-app="" ng-init="shop='Health Care Services'; weight=0; height=0; 
+                            bmString=[{min:1,       max:18.5,   str:'below normal weight'},
+                                        {min:18.5,  max:25,     str:'normal weight'},
+                                        {min:25,    max:30,     str:'Over weight'},
+                                        {min:30,    max:100,    str:'Obesity'} ]; ">
+        <h1>Welcome to {{ shop }}</h1>
+        <h2>What is your name?</h2>
+        <input type="text" ng-model="name">
+        <h2>BMI Calculator</h2>
+        <p>Type your weight (Kg)</p>
+        <input type="number" ng-model="weight">
+        <p>Type your height (cm)</p>
+        <input type="number" ng-model="height">
+        <h3 ng-if="weight && height">According to your weight of {{ weight }} kilograms, and height of {{ height }}
+            centimeters your BMI is </h3>
+        <h2 ng-if="weight && height">{{ weight / ((height/100)*(height/100)) }}</h2>
+
+        <h3 ng-if="weight && height">
+            <span ng-repeat="x in bmString">  
+                <h2 ng-if="weight / ((height/100)*(height/100)) >= x.min && weight / ((height/100)*(height/100)) < x.max">
+                {{ x.str }}</h2>
+            </span>
+        </h3>
+    </div>
+</body>
+
+</html>
