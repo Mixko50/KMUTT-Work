@@ -1,0 +1,240 @@
+@font-face {
+    font-family: CTOFontR;
+    src: url(/font/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: CTOFontB;
+    src: url(/font/Poppins-Bold.ttf);
+}
+
+body {
+    font-family: CTOFontB;
+    margin: 0;
+}
+
+.background_color {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right top, rgba(209, 107, 165, 0.82), rgba(95, 251, 241, 0.60)) , url(./img/background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    font-size: 30px;
+    width: 100vw;
+    height: 9vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%; 
+
+}
+
+.box {
+    background-color: aliceblue;
+    width: 85vw;
+    height: 75vh;
+    border-radius: 30px;
+    opacity: 90%;
+    margin-top: 9vh;
+}
+
+.input {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.input_number {
+    width: 10vw;
+    height: 5vh;
+    border: 2px red solid;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.input_number::-webkit-outer-spin-button,
+.input_number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input_number:focus {
+    background-color: rgb(191, 225, 236);
+    text-align: center;
+    outline: none;
+}
+
+.calculate {
+    margin-left: 2vw;
+    width: 10vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(150, 147, 147);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.calculate:hover {
+    background-color: greenyellow;
+}
+
+.calculate:active {
+    transform: translateY(3px);
+}
+
+.detail {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.bigbox {
+    display: flex;
+}
+
+@media screen and (max-width: 480px) {
+    .bigbox {
+      flex-direction: column;
+    }
+  }
+
+.energy1 {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.energy2 {
+    margin-top: 3vh;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.energy1_header {
+    width: 100%;
+    height: 7vh;
+    font-size: 1.55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.energy15 {
+    margin: 0 2vw;
+    margin-top: 1vh;
+    display: flex;
+    align-items: center;
+}
+
+.dc {
+    color: red;
+}
+
+.energy15_small1 {
+    margin-left: 3vw;
+    width: 70%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.energy15_small2 {
+    width: 30%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.energy15_result {
+    width: 10vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(150, 147, 147);
+}
+
+.energy_all_result h3{
+    margin-left: 5vw;
+}
+
+.energy2_service {
+    width: 100%;
+    height: 5vh;
+    background-color: #f0b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+    font-size: 1.50rem;
+    border-radius: 10px;
+    
+}
+
+.energy2_ft {
+    font-size: 20px;
+    margin-top: 2vh;
+    width: 70%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.energy2_ft_bt {
+    margin-top: 2vh;
+    width: 30%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.all_result {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all_result_box {
+    width: auto;
+    padding: 1vh 3vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcf876;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(150, 147, 147);
+    font-size: 1.9rem;
+}
+
+.baht {
+    margin: 0 4vw;
+    font-size: 30px;
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Bill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/energy.png">
+</head>
+
+<body>
+    <div class="background_color">
+        <div class="nav">Calculate your electric bill</div>
+        <div class="box">
+            <div class="input">
+                <h2>Input your number : &nbsp;</h2>
+                <input type="number" class="input_number" id="input_number1" placeholder="Number">
+                <div class="calculate" onclick='energy(document.getElementById("input_number1").value)'>Calculate</div>
+                <div class="calculate" onclick='energy(0) , document.getElementById("input_number1").value = ""' style="background-color: #ef4f4f; ">Reset</div>
+            </div>
+            <div class="detail">
+                <div class="bigbox">
+                    <div class="energy1">
+                        <div class="energy1_header">----- ค่าพลังงานไฟฟ้า -----</div>
+                        <div class="energy15">
+                            <div class="energy15_small1">
+                                <h3>15 หน่วยแรก : &nbsp;&nbsp; 2.3488 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;<span id="15_1" class="dc">0</span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="result_15_1"></div>
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy15_small1">
+                                <h3>10 หน่วยต่อไป : &nbsp;&nbsp;2.9882 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;<span id="10_2" class="dc">0</span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="result_10_2"></div>
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy15_small1">
+                                <h3>10 หน่วยต่อไป : &nbsp;&nbsp;3.2405 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;<span id="10_3" class="dc">0</span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="result_10_3"></div>
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy15_small1">
+                                <h3>65 หน่วยต่อไป : &nbsp;&nbsp;3.6237 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;<span id="65_4" class="dc">0</span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="result_65_4"></div>
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy15_small1">
+                                <h3>50 หน่วยต่อไป : &nbsp;&nbsp;3.7171 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;<span id="50_5" class="dc">0</span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="result_50_5"></div>
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy15_small1">
+                                <h3>250 หน่วยต่อไป : &nbsp;&nbsp;4.2218 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;<span id="50_6" class="dc">0</span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="result_50_6"></div>
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy15_small1">
+                                <h3>400 หน่วยขึ้นไป : &nbsp;&nbsp;4.4217 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;<span id="400_7" class="dc">0</span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="result_400_7"></div>
+                            </div>
+                        </div>
+                        <div class="energy15" style="margin-top: 4vh;">
+                            <div class="energy15_small1">
+                                <h3 style="margin-left: 10vw;">ผลรวม : &nbsp;&nbsp;<span></span></h3>
+                            </div>
+                            <div class="energy15_small2">
+                                <div class="energy15_result" id="energy1_result"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="energy2">
+                        <div class="energy15">
+                            <div class="energy2_service">
+                                ค่าบริการ : 8.19 บาท
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy2_ft">
+                                <h3>ค่า FT &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -14.23 สตางค์ / หน่วย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รวม :<span id="ft"></span></h3>
+                            </div>
+                            <div class="energy2_ft_bt">
+                                <div class="energy15_result" id="ft_result"></div>
+                            </div>
+                        </div>
+                        <div class="energy15">
+                            <div class="energy2_ft">
+                                <h3 style="margin-left: 10vw;">VAT <span style="margin-left: 10vw;"> รวม : </span></h3>
+                            </div>
+                            <div class="energy2_ft_bt">
+                                <div class="energy15_result" id="vat_result"></div>
+                            </div>
+                        </div>
+                        <div class="energy1_header" style="margin-top: 2vh;">---- ค่าไฟฟ้าที่ต้องจ่าย ----</div>
+                        <div class="all_result">
+                            <div class="all_result_box" id="result_all"></div>
+                            <div class="baht">Baht</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+
+</html>
