@@ -1,0 +1,14 @@
+
+ .highlight {
+    background-color: green;
+  }
+
+
+  .highlight p {
+    font-style: italic;
+  }
+
+  .mainpoint{
+    color: red;
+    background-color: black;
+  }

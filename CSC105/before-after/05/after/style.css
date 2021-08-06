@@ -1,0 +1,23 @@
+/* Styles go here. */
+li {
+    list-style-type: none;
+    margin: 1px;
+    background-color: green;
+    border: 1px blue solid;
+    font-size: 18px;
+    text-align: center;
+    width: 200px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  li:last-child{
+    font-size: x-large;
+  }
+
+  div:nth-of-type(odd){
+    background-color: gray;
+  }
+

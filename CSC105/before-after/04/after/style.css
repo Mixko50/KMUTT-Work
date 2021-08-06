@@ -1,0 +1,4 @@
+ /* all li elements that are inside a section element. */
+ section > ul {
+    color: green;
+  }

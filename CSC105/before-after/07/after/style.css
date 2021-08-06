@@ -1,0 +1,15 @@
+body {
+    font-size: 120%;
+  }
+
+body>div:nth-child(2){
+  font-size: 2em;
+}
+
+body>div:nth-child(2)>div {
+  font-size: 2em;
+}
+
+body>div:nth-child(2)>div>div {
+  font-size: 0.5em;
+}
