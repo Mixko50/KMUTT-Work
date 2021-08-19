@@ -14,6 +14,7 @@ public class SortingLab {
 
         System.out.println("\n"+"Bubble Sort");
         print(c);   bubbleSort(c);  print(c);
+
     }
 
     public static void print(int[] arr){
