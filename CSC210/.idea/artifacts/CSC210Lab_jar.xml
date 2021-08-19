@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CSC210Lab:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CSC210Lab_jar</output-path>
+    <root id="archive" name="CSC210Lab.jar">
+      <element id="module-output" name="CSC210Lab" />
+    </root>
+  </artifact>
+</component>
