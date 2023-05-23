@@ -18,6 +18,13 @@ import Strategy.Duck;
 import Strategy.Ducks.MallardDuck;
 import Strategy.Ducks.RubberDuck;
 import Template.Beverage.Tea;
+
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         // Strategy
@@ -51,14 +58,14 @@ public class Main {
         System.out.println(beverage.cost());
         beverage = new Hazelnut(beverage);
         System.out.println(beverage.cost());
-        System.out.println(beverage.getDescription() + " $"+ beverage.cost());
+        System.out.println(beverage.getDescription() + " $" + beverage.cost());
 
         // Factory
         System.out.println("-----------------------Factory-------------------------------");
         PizzaStore nyStore = new NYPizzaStore();
 
         Pizza pizza = nyStore.orderPizza("veggie");
-        System.out.println("Mixko ordered a "+pizza.getName() + "\n");
+        System.out.println("Mixko ordered a " + pizza.getName() + "\n");
 
         SimplePizzaFactory simplePizzaFactory = new SimplePizzaFactory();
         SimplePizzaStore simple = new SimplePizzaStore(simplePizzaFactory);
@@ -77,5 +84,8 @@ public class Main {
         System.out.println("-----------------------Template-------------------------------");
         Tea tea = new Tea();
         tea.prepareRecipe();
+
+        DateFormat date = DateFormat.getDateInstance();
+        System.out.println(Calendar.getInstance());
     }
 }
